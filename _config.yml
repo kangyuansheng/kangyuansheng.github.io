@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: kysh的小窝
+title: TechnologyStacks
 subtitle: 人生天地之间，若白驹过隙，忽然而已
 description:
 keywords:
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.kangyuansheng.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

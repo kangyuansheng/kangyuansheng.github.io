@@ -209,7 +209,7 @@
                {% if theme.post_meta.item_text %}
                  <span class="post-meta-item-text">{{__('post.visitors')}}&#58;</span>
                {% endif %}
-                 <span class="leancloud-visitors-count">℃</span>
+                 <span class="leancloud-visitors-count"></span>
              </span>
           {% endif %}
 
@@ -337,9 +337,6 @@
     
 
     {% if theme.wechat_subscriber.enabled and not is_index %}
-      <div>
-        {% include 'my-copyright.swig' %}
-      </div>
       <div>
         {% include 'wechat-subscriber.swig' %}
       </div>

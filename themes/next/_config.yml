@@ -113,8 +113,8 @@ menu_icons:
 # Schemes
 #scheme: Muse
 #scheme: Mist
-scheme: Pisces
-#scheme: Gemini
+#scheme: Pisces
+scheme: Gemini
 
 
 # ---------------------------------------------------------------
@@ -154,7 +154,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-#avatar: /images/avatar.gif
+avatar: http://p8x1t721u.bkt.clouddn.com/MyTouxiang.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -243,7 +243,7 @@ post_wordcount:
 
 # Reward
 #reward_comment: Donate comment here
-#wechatpay: /images/wechatpay.jpg
+wechatpay: http://p8x1t721u.bkt.clouddn.com/appreciate.png
 #alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
@@ -353,7 +353,7 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: 9326b0d29638bbec31ff50c1cbe2f5cc
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -418,14 +418,15 @@ gitment:
 # Available value:
 #    button | slide
 # Warning: Baidu Share does not support https.
-#baidushare:
-##  type: button
+baidushare: 
+  type: button
+
 
 # Share
 # This plugin is more useful in China, make sure you known how to use it.
 # And you can find the use guide at official webiste: http://www.jiathis.com/.
 # Warning: JiaThis does not support https.
-#jiathis:
+# jiathis: false
   ##uid: Get this uid from http://www.jiathis.com/
 #add_this_id:
 
@@ -695,7 +696,7 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false
