@@ -103,4 +103,4 @@ baidu_url_submit:
   path: baidu_urls.txt          # 文本文档的地址， 新链接会保存在此文本文档里
 
 deploy:
- - type:baidu_url_submitter
+ type: baidu_url_submitter
