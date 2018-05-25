@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: TechnologyStacks
+title: NirvanaRebirth
 subtitle: 人生天地之间，若白驹过隙，忽然而已
 description:
 keywords:
@@ -78,9 +78,9 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://github.com/kangyuansheng/kangyuansheng.github.io.git
-  type: baidu_url_submitter
+- type: baidu_url_submitter
 
 search:
   path: search.xml
