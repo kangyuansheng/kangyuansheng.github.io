@@ -6,7 +6,7 @@
     "version": "3.7.1"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
+    "hexo": "^3.7.1",
     "hexo-asset-image": "git+https://github.com/CodeFalling/hexo-asset-image.git",
     "hexo-baidu-url-submit": "0.0.5",
     "hexo-deployer-git": "^0.3.1",
