@@ -9,6 +9,8 @@ categories: [OpenOffice]
 主要原理:
 通过第三方工具OpenOffice实现文件格式转换
 
+<!--more-->
+
 ### 2.环境搭建
 OpenOffice 下载地址http://www.openoffice.org/
 加载之后安装OpenOffice
