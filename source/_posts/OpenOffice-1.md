@@ -5,22 +5,22 @@ tags: [OpenOffice]
 categories: [OpenOffice]
 ---
 
-### 1.概述
+### 概述
 主要原理:
 通过第三方工具OpenOffice实现文件格式转换
 
 <!--more-->
 
-### 2.环境搭建
+### 环境搭建
 OpenOffice 下载地址http://www.openoffice.org/
 加载之后安装OpenOffice
 
-### 3.启动服务
-#### 1.通过本地方式调用并且开启服务
+### 启动服务
+#### 通过本地方式调用并且开启服务
 通过cmd调用服务, "cd D:/openOffice/install/program" 
 执行 soffice -headless -accept="socket,host=127.0.0.1,port=8100;urp;" -nofirststartwizard
 查看是否安装成功  netstat -ano|findstr  8100
-#### 2.通过Java方式调用并且开启服务
+#### 通过Java方式调用并且开启服务
 ```Java
 // 调用openoffice服务线程
 String command = "C:\Program Files (x86)\OpenOffice 4\program\soffice.exe -headless -accept=\"socket,host=127.0.0.1,port=8100;urp;\"";
@@ -29,8 +29,8 @@ Process p = Runtime.getRuntime().exec(command);
 p.destroy();
 ```
 
-### 4.程序代码
-#### 1.首先简述几个包的用途:
+### 程序代码
+#### 首先简述几个包的用途:
 ``` javascript
 <!-- 转换核心包 -->
 <dependency>
@@ -52,7 +52,7 @@ p.destroy();
 </dependency>
 ```
 
-#### 2.与Spring boot框架连接下的程序调用方法
+#### 与Spring boot框架连接下的程序调用方法
 ```Java
 @Autowired
 private DocumentConverter documentConverter;
@@ -60,7 +60,7 @@ private DocumentConverter documentConverter;
 documentConverter.convert("源文件").to("目标文件").execute();
 ```
 
-#### 3.Java方法调用1
+#### Java方法调用1
 ```Java
 File inputFile = new File("源文件");
 File outputFile = new File("目标文件");
@@ -80,7 +80,7 @@ JodConverter
          .as(DefaultDocumentFormatRegistry.ODS)
          .execute();
 ```
-#### 4.Java方法调用2
+#### Java方法调用2
 ```Java
 // 连接openoffice服务
 OpenOfficeConnection connection = new SocketOpenOfficeConnection("127.0.0.1", 8100);
