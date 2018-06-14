@@ -5,9 +5,8 @@ tags: [OpenOffice]
 categories: [OpenOffice]
 ---
 
-<!--more-->
-
 ### 概述
+<!--more-->
 主要原理:
 通过第三方工具OpenOffice实现文件格式转换
 
