@@ -5,7 +5,7 @@ tags: [Spring boot]
 categories: [Spring boot]
 ---
 
-<!--more-->
+
 ### 1. 注解(annotations)列表
 > * @SpringBootApplication：包含了@ComponentScan、@Configuration和@EnableAutoConfiguration注解。其中 @ComponentScan让spring Boot扫描到Configuration类并把它加入到程序上下文。
 > * @Configuration 等同于spring的XML配置文件；使用Java代码可以检查类型安全。
@@ -17,6 +17,8 @@ categories: [Spring boot]
 > * @PathVariable获取参数。
 > * @JsonBackReference解决嵌套外链问题。
 > * @RepositoryRestResourcepublic配合spring-boot-starter-data-rest使用。
+
+<!--more-->
 
 ### 2. 注解(annotations)详解
 #### 2.1 @SpringBootApplication：
