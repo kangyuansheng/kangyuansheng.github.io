@@ -20,7 +20,7 @@ categories: [Dorado7]
 
 ### 框架篇
 
-1. [Dorado7系列之框架篇:1.如何搭建BDF3框架](http://kangyuansheng.top/2019/02/12/Dorado7/framework/Dorado7-%E6%A1%86%E6%9E%B6%E7%AF%87-%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83(Eclipse)/)
+1. [Dorado7系列之框架篇:1.如何搭建BDF3框架](http://kangyuansheng.top/2019/02/12/Dorado7/framework/Dorado7-%E6%A1%86%E6%9E%B6%E7%AF%87-%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/)
 2. [Dorado7系列之框架篇:2.搭建BDF3框架](http://kangyuansheng.top/2019/02/12/Dorado7/framework/Dorado7-%E6%A1%86%E6%9E%B6%E7%AF%87-%E6%90%AD%E5%BB%BABDF3%E6%A1%86%E6%9E%B6/)
 3. [Dorado7系列之框架篇:3.BDF3集成Lombok](http://kangyuansheng.top/2019/02/12/Dorado7/framework/Dorado7-%E6%A1%86%E6%9E%B6%E7%AF%87-BDF3%E9%9B%86%E6%88%90Lombok/) 
 
