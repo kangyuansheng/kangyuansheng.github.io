@@ -1,5 +1,6 @@
 ---
 title: categories
-date: 2018-05-17 15:22:45
-type: categories
+date: 2018-09-30 17:25:30
+type: "categories"
+layout: "categories"
 ---
