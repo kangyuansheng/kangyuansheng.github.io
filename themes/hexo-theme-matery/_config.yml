@@ -92,9 +92,9 @@ indexbtn:
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  qq: 123123123
-  github:
-  email: xxx@xx.xx
+  qq: 1219764457
+  github: https://github.com/kangyuansheng
+  email: kangyuansheng@aliyun.com
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
 # You can add `toc: false` to the Front-matter of a post to turn off the TOC.
@@ -121,7 +121,7 @@ reward:
 # minCharNumber: Approve copyright information by copying at least how many characters.
 # 是否激活复制文章时追加博客和作者的版权信息.
 copyright:
-  enable: false
+  enable: true
   minCharNumber: 120 # 至少复制多少个字符就追加版权信息.
   description: 本文章著作权归作者所有，任何形式的转载都请注明出处。
 
@@ -140,7 +140,7 @@ mathjax:
 # 文章字数统计、阅读时长、总字数统计
 # 激活前请确认你已经安装了 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
 wordCount:
-  enable: false
+  enable: true
   postWordCount: true
   min2read: true
   totalCount: true
