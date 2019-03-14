@@ -1,16 +1,26 @@
 [{
-	"name": "五月雨变奏电音",
-	"artist": "AnimeVibe",
-	"url": "http://xxx.com/music1.mp3",
-	"cover": "http://xxx.com/music-cover1.png"
+	"name": "说爱你 (吉他男声版)",
+	"artist": "黑崎子",
+	"url": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/%E9%BB%91%E5%B4%8E%E5%AD%90%20-%20%E8%AF%B4%E7%88%B1%E4%BD%A0%20(%E5%90%89%E4%BB%96%E7%94%B7%E5%A3%B0%E7%89%88).mp3",
+	"cover": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/music_icon.jpg"
 }, {
-	"name": "Take me hand",
-	"artist": "DAISHI DANCE,Cecile Corbel",
-	"url": "/medias/music/music2.mp3",
-	"cover": "/medias/music/cover2.png"
+	"name": "月牙湾",
+	"artist": "飞儿乐团",
+	"url": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/%E9%A3%9E%E5%84%BF%E4%B9%90%E5%9B%A2%20-%20%E6%9C%88%E7%89%99%E6%B9%BE.mp3",
+	"cover": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/music_icon.jpg"
 }, {
-	"name": "Shape of You",
-	"artist": "J.Fla",
-	"url": "http://xxx.com/music3.mp3",
-	"cover": "http://xxx.com/music-cover3.png"
+	"name": "凌晨三点",
+	"artist": "陈硕子",
+	"url": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/%E9%99%88%E7%A1%95%E5%AD%90%20-%20%E5%87%8C%E6%99%A8%E4%B8%89%E7%82%B9.mp3",
+	"cover": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/music_icon.jpg"
+}, {
+	"name": "不仅仅是喜欢",
+	"artist": "虎二",
+	"url": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/%E8%99%8E%E4%BA%8C%20-%20%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%96%9C%E6%AC%A2.mp3",
+	"cover": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/music_icon.jpg"
+}, {
+	"name": "流浪(苏谭谭版)",
+	"artist": "侯正阳",
+	"url": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/%E4%BE%AF%E6%AD%A3%E9%98%B3%20-%20%E6%B5%81%E6%B5%AA%20(%E8%8B%8F%E8%B0%AD%E8%B0%AD%E7%89%88).mp3",
+	"cover": "http://kyshblogs.oss-cn-beijing.aliyuncs.com/music/music_icon.jpg"
 }]
