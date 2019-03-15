@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: NirvanaRebirth
-subtitle: 人生天地之间，若白驹过隙，忽然而已
+title: Hexo
+subtitle:
 description:
 keywords:
-author: kysh
+author: KangYuanSheng
 language: zh-CN
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.kangyuansheng.top
+url: http://www.kangyuannsheng.top
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -49,7 +49,7 @@ prism_plugin:
   theme: 'tomorrow'
   line_number: false    # default false
   custom_css:
-
+  
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -78,46 +78,23 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
+## Themes: https://hexo.io/themes/ 主题
 theme: hexo-theme-matery
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
+  type: git
   repo: https://github.com/kangyuansheng/kangyuansheng.github.io.git
-- type: baidu_url_submitter
+  branch: master
 
 search:
   path: search.xml
   field: post
-  format: html
-  limit: 10000
-
-Plugins:
-- hexo-generator-baidu-sitemap
-- hexo-generator-sitemap
-
-baidusitemap:
-    path: baidusitemap.xml
-sitemap:
-    path: sitemap.xml
-
-baidu_url_submit:
-  count: 100                    # 提交最新的一个链接
-  host: www.kangyuansheng.top     # 在百度站长平台中注册的域名
-  token: VhDMqVJvlTi9vee4       # 请注意这是您的秘钥， 所以请不要把博客源代码发布在公众仓库里!
-  path: baidu_urls.txt          # 文本文档的地址， 新链接会保存在此文本文档里
 
 permalink_pinyin:
   enable: true
   separator: '-' # default: '-'
-
-wordCount:
-  enable: false # 将这个值设置为 true 即可.
-  postWordCount: true
-  min2read: true
-  totalCount: true
 
 feed:
   type: atom

@@ -1,14 +1,16 @@
 ---
 title: Dorado7系列目录
-date: 2018-05-16 09:09:19
-tags: [Dorado7]
-
-categories: [Dorado7]
+date: 2018-09-01 09:25:00
+author: 康源晟
+top: true
+cover: true
+toc: false
+mathjax: false
+summary: Dorado7系列目录
+categories: Dorado7
+tags:
+  - Dorado7
 ---
-
-下面是最近总结的Dorado7系列相关文章的目录。
-
-<!--more-->
 
 ### 基础篇
 
