@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.kangyuannsheng.top/"/>
+  <updated>2019-03-15T01:48:15.673Z</updated>
+  <id>http://www.kangyuannsheng.top/</id>
+  
+  <author>
+    <name>KangYuanSheng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dorado7系列之框架篇:1.如何搭建BDF3框架</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/13/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-kai-fa-huan-jing/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/13/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-kai-fa-huan-jing/</id>
+    <published>2018-09-13T01:25:00.000Z</published>
+    <updated>2019-03-15T01:48:15.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Eclipse配置&quot;&gt;&lt;a href=&quot;#Eclipse配置&quot; class=&quot;headerlink&quot; title=&quot;Eclipse配置&quot;&gt;&lt;/a&gt;Eclipse配置&lt;/h1&gt;&lt;h2 id=&quot;修改Eclipse字体大小&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+      <category term="BDF3" scheme="http://www.kangyuannsheng.top/tags/BDF3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dorado7系列之框架篇:2.搭建BDF3框架</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/12/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-bdf3-kuang-jia/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/12/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-bdf3-kuang-jia/</id>
+    <published>2018-09-12T01:25:00.000Z</published>
+    <updated>2019-03-15T01:48:11.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;BDF3介绍&quot;&gt;&lt;a href=&quot;#BDF3介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+      <category term="BDF3" scheme="http://www.kangyuannsheng.top/tags/BDF3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dorado7系列之框架篇:3.BDF3集成Lombok</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/11/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-bdf3-ji-cheng-lombok/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/11/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-bdf3-ji-cheng-lombok/</id>
+    <published>2018-09-11T01:25:00.000Z</published>
+    <updated>2019-03-15T01:48:07.250Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;修改pom文件&quot;&gt;&lt;a href=&quot;#修改pom文件&quot; class=&quot;headerlink&quot; title=&quot;修改pom文件&quot;&gt;&lt;/a&gt;修改pom文件&lt;/h3&gt;&lt;pre class=&quot; language-xml&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+      <category term="BDF3" scheme="http://www.kangyuannsheng.top/tags/BDF3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dorado7系列之基础篇:2.新建一个单表维护模块</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/08/dorado7/ji-chu-pian/dorado7-basic-datagrid-1/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/08/dorado7/ji-chu-pian/dorado7-basic-datagrid-1/</id>
+    <published>2018-09-08T01:25:00.000Z</published>
+    <updated>2019-03-15T01:47:57.257Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本篇将介绍在Dorado7中如何新建一个简单的单表维护模块.&lt;/p&gt;
+&lt;h3 id=&quot;新建Entity&quot;&gt;&lt;a href=&quot;#新建Entity&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dorado7系列之基础篇:1.Dorado7介绍以及一些常用文档</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/07/dorado7/ji-chu-pian/dorado7-basic-basic/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/07/dorado7/ji-chu-pian/dorado7-basic-basic/</id>
+    <published>2018-09-07T01:25:00.000Z</published>
+    <updated>2019-03-15T01:47:52.493Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-简单介绍一下Dorado7&quot;&gt;&lt;a href=&quot;#1-简单介绍一下Dorado7&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dorado7系列目录</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/01/dorado7/dorado7-xi-lie-mu-lu/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/01/dorado7/dorado7-xi-lie-mu-lu/</id>
+    <published>2018-09-01T01:25:00.000Z</published>
+    <updated>2019-03-15T01:44:40.457Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基础篇&quot;&gt;&lt;a href=&quot;#基础篇&quot; class=&quot;headerlink&quot; title=&quot;基础篇&quot;&gt;&lt;/a&gt;基础篇&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/categories/Dorado7/"/>
+    
+    
+      <category term="Dorado7" scheme="http://www.kangyuannsheng.top/tags/Dorado7/"/>
+    
+  </entry>
+  
+</feed>
