@@ -319,14 +319,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        732
+                        771
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        2 分
+                        3 分
                     </div>
                     
                 
@@ -354,16 +354,16 @@
 <li>使用spring官网 SPRING INITIALIZR 来构建项目结构（地址：<a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a>）</li>
 <li>使用IntelliJ IDEA开发工具来构建项目结构</li>
 </ul>
-<h4 id="2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构"><a href="#2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构" class="headerlink" title="2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构"></a>2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构</h4><p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0001.png" alt="cmd-markdown-logo"></p>
+<h4 id="2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构"><a href="#2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构" class="headerlink" title="2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构"></a>2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构</h4><p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0001.png" alt></p>
 <p>点击Generate Project就会下载一个根据你配置生成的压缩文件，然后进行解压。</p>
 <p>打开idea导入刚下载的项目，然后一直下一步就可以了。导入之后可以需要下载一段时间的jar包，不要急稍微等待一会。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0002.png" alt="cmd-markdown-logo"></p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0002.png" alt></p>
 <h4 id="2-2-使用IntelliJ-IDEA开发工具来构建项目结构"><a href="#2-2-使用IntelliJ-IDEA开发工具来构建项目结构" class="headerlink" title="2.2 使用IntelliJ IDEA开发工具来构建项目结构"></a>2.2 使用IntelliJ IDEA开发工具来构建项目结构</h4><p>首先我们打开idea选择创建新项目。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0003.png" alt="cmd-markdown-logo"></p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0003.png" alt></p>
 <p>在打开的界面中选择Spring Initializr-&gt;然后选择Next即可</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0004.png" alt="cmd-markdown-logo"></p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0004.png" alt></p>
 <p>在该界面中填写项目对应配置。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0005.png" alt="cmd-markdown-logo"></p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0005.png" alt></p>
 <p>根据需要下载对应的模块。</p>
 <h3 id="3-Spring-Boot目录结构"><a href="#3-Spring-Boot目录结构" class="headerlink" title="3.Spring Boot目录结构:"></a>3.Spring Boot目录结构:</h3><blockquote>
 <ul>
@@ -387,18 +387,17 @@ public class SpringbootCodeBaseApplication {
 }
 </code></pre>
 <h4 id="3-2-application-properties"><a href="#3-2-application-properties" class="headerlink" title="3.2 application.properties"></a>3.2 application.properties</h4><p>该配置文件是项目的核心配置文件</p>
-<p>####3.3 pom.xml  maven配置文件</p>
-<pre class=" language-Java"><code class="language-Java"><!-- 引入Web模块  -->
-<dependency>
-    <groupid>org.springframework.boot</groupid>
-    <artifactid>spring-boot-starter-web</artifactid>
-</dependency>
-<!-- 测试模块  -->
-<dependency>
-    <groupid>org.springframework.boot</groupid>
-    <artifactid>spring-boot-starter-test</artifactid>
-    <scope>test</scope>
-</dependency>
+<h4 id="3-3-pom-xml-maven配置文件"><a href="#3-3-pom-xml-maven配置文件" class="headerlink" title="3.3 pom.xml  maven配置文件"></a>3.3 pom.xml  maven配置文件</h4><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">&lt;!--</span> <span class="token attr-value">引入Web模块  --></span>
+&lt;dependency>
+    &lt;groupId>org.springframework.boot&lt;/groupId>
+    &lt;artifactId>spring-boot-starter-web&lt;/artifactId>
+&lt;/dependency>
+<span class="token attr-name">&lt;!--</span> <span class="token attr-value">测试模块  --></span>
+&lt;dependency>
+    &lt;groupId>org.springframework.boot&lt;/groupId>
+    &lt;artifactId>spring-boot-starter-test&lt;/artifactId>
+    &lt;scope>test&lt;/scope>
+&lt;/dependency>
 </code></pre>
 <h3 id="编写HelloWorld"><a href="#编写HelloWorld" class="headerlink" title="编写HelloWorld:"></a>编写HelloWorld:</h3><p>创建HelloController类</p>
 <pre class=" language-Java"><code class="language-Java">/**
