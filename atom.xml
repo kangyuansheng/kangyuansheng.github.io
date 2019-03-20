@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kangyuannsheng.top/"/>
-  <updated>2019-03-15T01:48:15.673Z</updated>
+  <updated>2019-03-20T08:49:35.452Z</updated>
   <id>http://www.kangyuannsheng.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:1.HelloWord搭建与初步了解</title>
+    <link href="http://www.kangyuannsheng.top/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/"/>
+    <id>http://www.kangyuannsheng.top/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/</id>
+    <published>2018-09-14T01:25:00.000Z</published>
+    <updated>2019-03-20T08:49:35.452Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Spring-Boot的介绍：&quot;&gt;&lt;a href=&quot;#1-Spring-Boot的介绍：&quot; class=&quot;headerlink&quot; title=&quot;1.Spring Boot的介绍：&quot;&gt;&lt;/a&gt;1.Spring
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+  </entry>
   
   <entry>
     <title>Dorado7系列之框架篇:1.如何搭建BDF3框架</title>

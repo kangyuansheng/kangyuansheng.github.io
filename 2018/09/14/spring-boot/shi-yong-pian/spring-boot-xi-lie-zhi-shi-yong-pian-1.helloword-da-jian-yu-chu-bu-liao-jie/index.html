@@ -4,8 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Dorado7系列之框架篇:1.如何搭建BDF3框架, 康源晟的技术小站">
-    <meta name="description" content="Eclipse配置修改Eclipse字体大小[window]-&amp;gt;[preferences]-&amp;gt;[General]-&amp;gt;[Appearance]-&amp;gt;[Colors and Fonts]-&amp;gt;[Basic]-&amp;gt;点">
+    <meta name="keywords" content="Spring Boot系列之使用篇:1.HelloWord搭建与初步了解, 康源晟的技术小站">
+    <meta name="description" content="1.Spring Boot的介绍：Spring最重要的是以下四个核心。
+
+自动配置：针对很多Spring应用程序常见的应用功能，Spring Boot能自动提供相关配置
+起步依赖：告诉Spring Boot需要什么功能，它就能引入需要的库。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Dorado7系列之框架篇:1.如何搭建BDF3框架 | 康源晟的技术小站</title>
+    <title>Spring Boot系列之使用篇:1.HelloWord搭建与初步了解 | 康源晟的技术小站</title>
     <link rel="icon" type="image/png" href="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/kysh_logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -257,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Dorado7系列之框架篇:1.如何搭建BDF3框架
+                        Spring Boot系列之使用篇:1.HelloWord搭建与初步了解
                     </div>
                 </div>
             </div>
@@ -285,12 +288,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Dorado7/" target="_blank">
-                                <span class="chip bg-color">Dorado7</span>
-                            </a>
-                        
-                            <a href="/tags/BDF3/" target="_blank">
-                                <span class="chip bg-color">BDF3</span>
+                            <a href="/tags/Spring-Boot/" target="_blank">
+                                <span class="chip bg-color">Spring Boot</span>
                             </a>
                         
                     </div>
@@ -301,8 +300,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Dorado7/" class="post-category" target="_blank">
-                                Dorado7
+                            <a href="/categories/Spring-Boot/" class="post-category" target="_blank">
+                                Spring Boot
                             </a>
                         
                     </div>
@@ -313,14 +312,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2018-09-13
+                    2018-09-14
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        549
+                        732
                     </div>
                     
 
@@ -343,26 +342,87 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Eclipse配置"><a href="#Eclipse配置" class="headerlink" title="Eclipse配置"></a>Eclipse配置</h1><h2 id="修改Eclipse字体大小"><a href="#修改Eclipse字体大小" class="headerlink" title="修改Eclipse字体大小"></a>修改Eclipse字体大小</h2><p>[window]-&gt;[preferences]-&gt;[General]-&gt;[Appearance]-&gt;[Colors and Fonts]-&gt;[Basic]-&gt;点击展开Basic,最下面有 Text Font 这个选项，点击，然后修改保存即可。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Dorado7/Framework-Paper/Dorado7-framework-0004.png" alt="cmd-markdown-logo"></p>
-<h2 id="配置Dorado7开发插件"><a href="#配置Dorado7开发插件" class="headerlink" title="配置Dorado7开发插件"></a>配置Dorado7开发插件</h2><p>首先我们需要在官方网站上下载一个最新版的Eclipse。</p>
-<p>在Eclipse的安装文件目录中找到dropins，将Dorado7开发插件的文件夹拷贝到其中。</p>
-<p><strong>注意：</strong></p>
-<p>假如用Eclipse配置完Dorado7开发插件之后，打开View视图出现<strong>An error has occurred,See error log for more details</strong>报错。</p>
-<p>解决方法：在”开始”–&gt;”运行”—-&gt;打入”cmd”进入命令提示行后,再进入eclipse的安装目录,<br>         然后输入eclipse -clean即可（我用的这个方法 成功了）</p>
-<h2 id="配置Jetty插件"><a href="#配置Jetty插件" class="headerlink" title="配置Jetty插件"></a>配置Jetty插件</h2><p>[Help]-&gt;[Eclipse Marketplace]-&gt;在搜索条中输入Jetty点击搜索，找到Jetty插件点击<strong>Install</strong>，然后把插件安装下来就好了。(Ps:下载慢的小伙伴可以需要一个科学上网的工具。)</p>
-<h2 id="配置JRebel插件"><a href="#配置JRebel插件" class="headerlink" title="配置JRebel插件"></a>配置JRebel插件</h2><p>我们安装完Jetty插件之后还需要安装一个插件JRebel：可快速实现热部署，节省了大量重启时间，提高了个人开发效率。</p>
-<p>当下载完成之后需要激活一下才能使用。</p>
-<h2 id="关于Eclipse性能优化"><a href="#关于Eclipse性能优化" class="headerlink" title="关于Eclipse性能优化"></a>关于Eclipse性能优化</h2><h3 id="减少Eclipse启动后自动启动的插件"><a href="#减少Eclipse启动后自动启动的插件" class="headerlink" title="减少Eclipse启动后自动启动的插件"></a>减少Eclipse启动后自动启动的插件</h3><p>具体操作: 在Preferences -&gt; General -&gt; StartUp and Shutdown: 将除Plug-ins activated on startup以外的项目有节选的去掉（比如Mylyn等没用到,就去掉了）<br>效果: 启动Eclipse后,会有Initialing Java Tools的滚动条,会发现快了很多.</p>
-<h3 id="关掉自动编译"><a href="#关掉自动编译" class="headerlink" title="关掉自动编译"></a>关掉自动编译</h3><p>具体操作: Project -&gt; Build Automatically<br>效果: 在代码修改保存后,不会启动自动编译</p>
-<h3 id="减少编译需要验证的项目-提升编译速度"><a href="#减少编译需要验证的项目-提升编译速度" class="headerlink" title="减少编译需要验证的项目,提升编译速度"></a>减少编译需要验证的项目,提升编译速度</h3><p>具体操作: 在Preferences -&gt; Validataion 将无关的Validator去掉, 比如: 我就将和我无关的JPA, JSP, WS 都去掉了<br>效果: 编译项目时,Eclipse跑的Validator项目少了, 确实快了</p>
-<h3 id="配置eclipse-ini"><a href="#配置eclipse-ini" class="headerlink" title="配置eclipse.ini"></a>配置eclipse.ini</h3><pre><code>-XX:MaxPermSize=768m
--Xms1024m
--Xmx3072m
-</code></pre><h1 id="数据库配置"><a href="#数据库配置" class="headerlink" title="数据库配置"></a>数据库配置</h1><p>这里我们介绍一个软件:XAMPP（Apache+MySQL+PHP+PERL）是一个功能强大的建站集成软件包。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Dorado7/Framework-Paper/Dorado7-framework-0002.png" alt="cmd-markdown-logo"></p>
-<p>这里我们搭建一个bdf3数据库。</p>
-<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Dorado7/Framework-Paper/Dorado7-framework-0003.png" alt="cmd-markdown-logo"></p>
+                <h3 id="1-Spring-Boot的介绍："><a href="#1-Spring-Boot的介绍：" class="headerlink" title="1.Spring Boot的介绍："></a>1.Spring Boot的介绍：</h3><p>Spring最重要的是以下四个核心。</p>
+<ul>
+<li>自动配置：针对很多Spring应用程序常见的应用功能，Spring Boot能自动提供相关配置</li>
+<li>起步依赖：告诉Spring Boot需要什么功能，它就能引入需要的库。</li>
+<li>命令行界面：这是Spring Boot的可选特性，借此你只需写代码就能完成完整的应用程序，无需传统项目构建。</li>
+<li>Actuator：让你能够深入运行中的Spring Boot应用程序，一探究竟。</li>
+</ul>
+<h3 id="2-搭建HelloWord项目"><a href="#2-搭建HelloWord项目" class="headerlink" title="2.搭建HelloWord项目"></a>2.搭建HelloWord项目</h3><p>目前构建项目有多种方式我这里简单介绍两种。</p>
+<ul>
+<li>使用spring官网 SPRING INITIALIZR 来构建项目结构（地址：<a href="http://start.spring.io/" target="_blank" rel="noopener">http://start.spring.io/</a>）</li>
+<li>使用IntelliJ IDEA开发工具来构建项目结构</li>
+</ul>
+<h4 id="2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构"><a href="#2-1-使用Spring官网-SPRING-INITIALIZR-来构建项目结构" class="headerlink" title="2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构"></a>2.1 使用Spring官网 SPRING INITIALIZR 来构建项目结构</h4><p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0001.png" alt="cmd-markdown-logo"></p>
+<p>点击Generate Project就会下载一个根据你配置生成的压缩文件，然后进行解压。</p>
+<p>打开idea导入刚下载的项目，然后一直下一步就可以了。导入之后可以需要下载一段时间的jar包，不要急稍微等待一会。</p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0002.png" alt="cmd-markdown-logo"></p>
+<h4 id="2-2-使用IntelliJ-IDEA开发工具来构建项目结构"><a href="#2-2-使用IntelliJ-IDEA开发工具来构建项目结构" class="headerlink" title="2.2 使用IntelliJ IDEA开发工具来构建项目结构"></a>2.2 使用IntelliJ IDEA开发工具来构建项目结构</h4><p>首先我们打开idea选择创建新项目。</p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0003.png" alt="cmd-markdown-logo"></p>
+<p>在打开的界面中选择Spring Initializr-&gt;然后选择Next即可</p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0004.png" alt="cmd-markdown-logo"></p>
+<p>在该界面中填写项目对应配置。</p>
+<p><img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/Spring-Boot/Spring-Boot-0005.png" alt="cmd-markdown-logo"></p>
+<p>根据需要下载对应的模块。</p>
+<h3 id="3-Spring-Boot目录结构"><a href="#3-Spring-Boot目录结构" class="headerlink" title="3.Spring Boot目录结构:"></a>3.Spring Boot目录结构:</h3><blockquote>
+<ul>
+<li>/src/main/java  存放项目所有源代码目录</li>
+<li>/src//main/resources  存放项目所有资源文件以及配置文件目录</li>
+<li>/src/test  存放测试代码目录</li>
+</ul>
+</blockquote>
+<p>这个时候按照idea搭建了一个Spring Boot项目,这个时候我们发现这个项目已经自动生成了一些文件.</p>
+<h4 id="3-1-SpringbootcodebaseApplication"><a href="#3-1-SpringbootcodebaseApplication" class="headerlink" title="3.1 SpringbootcodebaseApplication"></a>3.1 SpringbootcodebaseApplication</h4><p>该类是程序的入口,类内有个main方法.</p>
+<pre class=" language-Java"><code class="language-Java">/**
+ * @SpringBootApplication 声明当前类为sprinboot的入口类
+ * 一个springboot项目内有且只能有一个这个注解存在
+ */
+@SpringBootApplication
+public class SpringbootCodeBaseApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootCodeBaseApplication.class, args);
+    }
+}
+</code></pre>
+<h4 id="3-2-application-properties"><a href="#3-2-application-properties" class="headerlink" title="3.2 application.properties"></a>3.2 application.properties</h4><p>该配置文件是项目的核心配置文件</p>
+<p>####3.3 pom.xml  maven配置文件</p>
+<pre class=" language-Java"><code class="language-Java"><!-- 引入Web模块  -->
+<dependency>
+    <groupid>org.springframework.boot</groupid>
+    <artifactid>spring-boot-starter-web</artifactid>
+</dependency>
+<!-- 测试模块  -->
+<dependency>
+    <groupid>org.springframework.boot</groupid>
+    <artifactid>spring-boot-starter-test</artifactid>
+    <scope>test</scope>
+</dependency>
+</code></pre>
+<h3 id="编写HelloWorld"><a href="#编写HelloWorld" class="headerlink" title="编写HelloWorld:"></a>编写HelloWorld:</h3><p>创建HelloController类</p>
+<pre class=" language-Java"><code class="language-Java">/**
+ * @RestController:
+ * Spring4之后新加入的注解，原来返回json需要@ResponseBody和@Controller配合。
+ * 即@RestController是@ResponseBody和@Controller的组合注解。
+ */
+@RestController
+public class HelloController {
+
+    /**
+     * @RequestMapping 配置url映射
+     * @RequestMapping此注解即可以作用在控制器的某个方法上，也可以作用在此控制器类上。
+     * 当控制器在类级别上添加@RequestMapping注解时，这个注解会应用到控制器的所有处理器方法上。
+     * 处理器方法上的@RequestMapping注解会对类级别上的@RequestMapping的声明进行补充。
+     */
+    @RequestMapping("/hello")
+    public String index() {
+        return "Hello World";
+    }
+}
+
+</code></pre>
+<p>启动主程序，打开浏览器访问<a href="http://localhost:8080/hello，可以看到页面输出Hello" target="_blank" rel="noopener">http://localhost:8080/hello，可以看到页面输出Hello</a> World</p>
 
             </div>
             <hr>
@@ -510,7 +570,7 @@
                     </span>
                     <a href="http://www.kangyuannsheng.top" class="b-link-green">康源晟的技术小站</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2018/09/13/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-kai-fa-huan-jing/" class="b-link-green">Dorado7系列之框架篇:1.如何搭建BDF3框架</a>
+                    <a href="/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/" class="b-link-green">Spring Boot系列之使用篇:1.HelloWord搭建与初步了解</a>
                 </p>
             </div>
         </div>
@@ -533,7 +593,8 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/">
                     <div class="card-image">
@@ -550,9 +611,9 @@
 自动配置：针对很多Spring应用程序常见的应用功能，Spring Boot能自动提供相关配置
 起步依赖：告诉Spring Boot需要什么功能，它就能引入需要的库。</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -565,6 +626,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -583,21 +645,20 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2018/09/12/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-bdf3-kuang-jia/">
+                <a href="/2018/09/13/dorado7/kuang-jia-pian/dorado7-kuang-jia-pian-da-jian-kai-fa-huan-jing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Dorado7系列之框架篇:2.搭建BDF3框架">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Dorado7系列之框架篇:1.如何搭建BDF3框架">
                         
-                        <span class="card-title">Dorado7系列之框架篇:2.搭建BDF3框架</span>
+                        <span class="card-title">Dorado7系列之框架篇:1.如何搭建BDF3框架</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">BDF3介绍引用BDF3的GitHub的介绍:
-bdf3基于spring-boot研发的开发框架。包含用户、角色、菜单、权限（最小粒度为组件）、数据导入、字典、日志、实时通讯、公众号、微程序、云数据库、个人中心、云数据源、用户个性化和一个或</div>
+                    <div class="summary">Eclipse配置修改Eclipse字体大小[window]-&gt;[preferences]-&gt;[General]-&gt;[Appearance]-&gt;[Colors and Fonts]-&gt;[Basic]-&gt;点</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-12
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-13
                             </span>
                         <span class="publish-author">
                             
