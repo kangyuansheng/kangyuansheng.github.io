@@ -1,0 +1,1008 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Spring Boot系列之使用篇:7.配置文件, 康源晟的技术小站">
+    <meta name="description" content="1.application.properties介绍：Spring Boot使用“习惯优于配置”的理念让你的项目快速运行起来。application.properties是Spring Boot主要的全局配置文件。一般放在src/main/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Spring Boot系列之使用篇:7.配置文件 | 康源晟的技术小站</title>
+    <link rel="icon" type="image/png" href="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/kysh_logo.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/kysh_logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">康源晟的技术小站</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/kysh_logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">康源晟的技术小站</div>
+        <div class="logo-desc">
+            
+            学而不思则罔，思而不学则殆。——孔子
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        Spring Boot系列之使用篇:7.配置文件
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring-Boot/" target="_blank">
+                                <span class="chip bg-color">Spring Boot</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Spring-Boot/" class="post-category" target="_blank">
+                                Spring Boot
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-03-24
+                </div>
+
+                
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                        2.6k
+                    </div>
+                    
+
+                    
+                    <div class="info-break-policy">
+                        <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                        11 分
+                    </div>
+                    
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="1-application-properties介绍："><a href="#1-application-properties介绍：" class="headerlink" title="1.application.properties介绍："></a>1.application.properties介绍：</h3><p>Spring Boot使用“习惯优于配置”的理念让你的项目快速运行起来。application.properties是Spring Boot主要的全局配置文件。一般放在src/main/resources目录下。</p>
+<h3 id="2-application-properties常用配置"><a href="#2-application-properties常用配置" class="headerlink" title="2.application.properties常用配置:"></a>2.application.properties常用配置:</h3><h4 id="2-1-数据库连接配置"><a href="#2-1-数据库连接配置" class="headerlink" title="2.1 数据库连接配置"></a>2.1 数据库连接配置</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true">#描述数据源</span>
+<span class="token attr-name">spring.datasource.url</span><span class="token punctuation">=</span><span class="token attr-value">jdbc:mysql://localhost:3306/demo</span>
+<span class="token attr-name">spring.datasource.username</span><span class="token punctuation">=</span><span class="token attr-value">root</span>
+<span class="token attr-name">spring.datasource.password</span><span class="token punctuation">=</span><span class="token attr-value">0000</span>
+<span class="token attr-name">spring.datasource.driver-class-name</span><span class="token punctuation">=</span><span class="token attr-value">com.mysql.jdbc.Driver</span>
+</code></pre>
+<h4 id="2-2-配置端口和项目名访问"><a href="#2-2-配置端口和项目名访问" class="headerlink" title="2.2 配置端口和项目名访问"></a>2.2 配置端口和项目名访问</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true">#指定springboot内嵌容器启动的端口，默认使用tomcat容器时在8080端口    </span>
+<span class="token attr-name">server.port</span><span class="token punctuation">=</span><span class="token attr-value">8081</span>
+<span class="token comment" spellcheck="true">#配置项目访问路径</span>
+<span class="token attr-name">server.servlet.context-path</span><span class="token punctuation">=</span><span class="token attr-value">/boot</span>
+</code></pre>
+<h4 id="2-3-日志配置"><a href="#2-3-日志配置" class="headerlink" title="2.3 日志配置"></a>2.3 日志配置</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 日志配置文件的位置。 例如对于Logback的`classpath：logback.xml`</span>
+<span class="token attr-name">logging.config</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># ％wEx#记录异常时使用的转换字。</span>
+<span class="token attr-name">logging.exception-conversion-word</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 日志文件名。 例如`myapp.log`</span>
+<span class="token attr-name">logging.file</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 日志级别严重性映射。 例如`logging.level.org.springframework =  DEBUG`</span>
+<span class="token attr-name">logging.level.*</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 日志文件的位置。 例如`/ var / log`</span>
+<span class="token attr-name">logging.path</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于输出到控制台的Appender模式。 只支持默认的logback设置。</span>
+<span class="token attr-name">logging.pattern.console</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于输出到文件的Appender模式。 只支持默认的logback设置。</span>
+<span class="token attr-name">logging.pattern.file</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 日志级别的Appender模式（默认％5p）。 只支持默认的logback设置。</span>
+<span class="token attr-name">logging.pattern.level</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true">#注册日志记录系统的初始化挂钩。</span>
+<span class="token attr-name">logging.register-shutdown-hook</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+</code></pre>
+<h4 id="2-4-AOP-切面"><a href="#2-4-AOP-切面" class="headerlink" title="2.4 AOP 切面"></a>2.4 AOP 切面</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 添加@EnableAspectJAutoProxy。</span>
+<span class="token attr-name">spring.aop.auto</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+<span class="token comment" spellcheck="true"># 是否要创建基于子类（CGLIB）的代理（true），而不是基于标准的基于Java接口的代理（false）。</span>
+<span class="token attr-name">spring.aop.proxy-target-class</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+
+
+<span class="token comment" spellcheck="true"># 应用程序上下文初始化器</span>
+<span class="token comment" spellcheck="true"># 应用指标。</span>
+<span class="token attr-name">spring.application.index</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 应用程序名称。</span>
+<span class="token attr-name">spring.application.name</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+</code></pre>
+<h4 id="2-5-国际化（消息源自动配置）"><a href="#2-5-国际化（消息源自动配置）" class="headerlink" title="2.5 国际化（消息源自动配置）"></a>2.5 国际化（消息源自动配置）</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true">#</span>
+<span class="token attr-name">spring.messages.basename</span><span class="token punctuation">=</span> <span class="token attr-value">messages</span>
+<span class="token comment" spellcheck="true"># 以逗号分隔的基础名称列表，每个都在ResourceBundle约定之后。</span>
+<span class="token comment" spellcheck="true"># 加载的资源束文件缓存到期，以秒为单位。 设置为-1时，软件包将永久缓存。</span>
+<span class="token attr-name">spring.messages.cache-seconds</span><span class="token punctuation">=</span> <span class="token attr-value">-1</span>
+<span class="token comment" spellcheck="true"># 消息编码。</span>
+<span class="token attr-name">spring.messages.encoding</span><span class="token punctuation">=</span> <span class="token attr-value">UTF-8</span>
+<span class="token comment" spellcheck="true"># 设置是否返回到系统区域设置，如果没有找到特定语言环境的文件。</span>
+<span class="token attr-name">spring.messages.fallback-to-system-locale</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+</code></pre>
+<h4 id="2-6-Spring-核心配置"><a href="#2-6-Spring-核心配置" class="headerlink" title="2.6 Spring 核心配置"></a>2.6 Spring 核心配置</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 跳过搜索BeanInfo类。</span>
+<span class="token attr-name">spring.beaninfo.ignore</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+
+<span class="token comment" spellcheck="true"># spring 缓存配置</span>
+<span class="token comment" spellcheck="true"># 由底层缓存管理器支持的要创建的缓存名称的逗号分隔列表。</span>
+<span class="token attr-name">spring.cache.cache-names</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于初始化EhCache的配置文件的位置。</span>
+<span class="token attr-name">spring.cache.ehcache.config</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于创建缓存的规范。 检查CacheBuilderSpec有关规格格式的更多细节。</span>
+<span class="token attr-name">spring.cache.guava.spec</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于初始化Hazelcast的配置文件的位置。</span>
+<span class="token attr-name">spring.cache.hazelcast.config</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于初始化Infinispan的配置文件的位置。</span>
+<span class="token attr-name">spring.cache.infinispan.config</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于初始化缓存管理器的配置文件的位置。</span>
+<span class="token attr-name">spring.cache.jcache.config</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于检索符合JSR-107的缓存管理器的CachingProvider实现的完全限定名称。 只有在类路径上有多个JSR-107实现可用时才需要。</span>
+<span class="token attr-name">spring.cache.jcache.provider</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 缓存类型，默认情况下根据环境自动检测。</span>
+<span class="token attr-name">spring.cache.type</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+</code></pre>
+<h4 id="2-7-WEB属性"><a href="#2-7-WEB属性" class="headerlink" title="2.7 WEB属性"></a>2.7 WEB属性</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 文件上传属性</span>
+<span class="token comment" spellcheck="true"># 启用对文件上传的支持。</span>
+<span class="token attr-name">multipart.enabled</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+<span class="token comment" spellcheck="true"># 将文件写入磁盘后的阈值。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。</span>
+<span class="token attr-name">multipart.file-size-threshold</span><span class="token punctuation">=</span> <span class="token attr-value">0</span>
+<span class="token comment" spellcheck="true"># 上传文件的位置。</span>
+<span class="token attr-name">multipart.location</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 最大文件大小。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。</span>
+<span class="token attr-name">multipart.max-file-size</span><span class="token punctuation">=</span> <span class="token attr-value">1Mb</span>
+<span class="token comment" spellcheck="true"># 最大请求大小。 值可以使用后缀“MB”或“KB”表示兆字节或千字节大小。</span>
+<span class="token attr-name">multipart.max-request-size</span><span class="token punctuation">=</span> <span class="token attr-value">10Mb</span>
+</code></pre>
+<h4 id="2-8-服务器属性"><a href="#2-8-服务器属性" class="headerlink" title="2.8 服务器属性"></a>2.8 服务器属性</h4><pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 服务器应绑定到的网络地址。</span>
+<span class="token attr-name">server.address</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 如果启用响应压缩。</span>
+<span class="token attr-name">server.compression.enabled</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+<span class="token comment" spellcheck="true"># 从压缩中排除的用户代理列表。</span>
+<span class="token attr-name">server.compression.excluded-user-agents</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 应该压缩的MIME类型的逗号分隔列表。 例如`text / html，text / css，application / json`</span>
+<span class="token attr-name">server.compression.mime-types</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 执行压缩所需的最小响应大小。 例如2048</span>
+<span class="token attr-name">server.compression.min-response-size</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># Servlet上下文初始化参数。 例如`server.context-parameters.a =  alpha`</span>
+<span class="token attr-name">server.context-parameters.*</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 应用程序的上下文路径。</span>
+<span class="token attr-name">server.context-path</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 显示应用程序的名称。</span>
+<span class="token attr-name">server.display-name</span><span class="token punctuation">=</span> <span class="token attr-value">application</span>
+<span class="token comment" spellcheck="true"># 何时包含“stacktrace”属性。</span>
+<span class="token attr-name">server.error.include-stacktrace</span><span class="token punctuation">=</span> <span class="token attr-value">never</span>
+<span class="token comment" spellcheck="true"># 错误控制器的路径。</span>
+<span class="token attr-name">server.error.path</span><span class="token punctuation">=</span> <span class="token attr-value">/error</span>
+<span class="token comment" spellcheck="true"># 启动浏览器中出现服务器错误时显示的默认错误页面。</span>
+<span class="token attr-name">server.error.whitelabel.enabled</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+<span class="token comment" spellcheck="true"># JSP servlet的类名。</span>
+<span class="token attr-name">server.jsp-servlet.class-name</span><span class="token punctuation">=</span> <span class="token attr-value">org.apache.jasper.servlet.JspServlet</span>
+<span class="token comment" spellcheck="true"># Init参数用于配置JSP servlet</span>
+<span class="token attr-name">server.jsp-servlet.init-parameters.*</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># JSP servlet是否被注册</span>
+<span class="token attr-name">server.jsp-servlet.registered</span><span class="token punctuation">=</span> <span class="token attr-value">true</span>
+<span class="token comment" spellcheck="true"># 服务器HTTP端口。</span>
+<span class="token attr-name">server.port</span><span class="token punctuation">=</span> <span class="token attr-value">8080</span>
+<span class="token comment" spellcheck="true"># 主调度程序servlet的路径。</span>
+<span class="token attr-name">server.servlet-path</span><span class="token punctuation">=</span> <span class="token attr-value">/</span>
+<span class="token comment" spellcheck="true"># 会话cookie的注释。</span>
+<span class="token attr-name">server.session.cookie.comment</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话cookie的域。</span>
+<span class="token attr-name">server.session.cookie.domain</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># “HttpOnly”标志为会话cookie。</span>
+<span class="token attr-name">server.session.cookie.http-only</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话cookie的最大时长（以秒为单位）。</span>
+<span class="token attr-name">server.session.cookie.max-age</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话cookie名称。</span>
+<span class="token attr-name">server.session.cookie.name</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话cookie的路径。</span>
+<span class="token attr-name">server.session.cookie.path</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话cookie的“安全”标志。</span>
+<span class="token attr-name">server.session.cookie.secure</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 重启之间持续会话数据。</span>
+<span class="token attr-name">server.session.persistent</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+<span class="token comment" spellcheck="true"># 用于存储会话数据的目录。</span>
+<span class="token attr-name">server.session.store-dir</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话超时（秒）。</span>
+<span class="token attr-name">server.session.timeout</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 会话跟踪模式（以下一个或多个：“cookie”，“url”，“ssl”）。</span>
+<span class="token attr-name">server.session.tracking-modes</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 支持SSL密码。</span>
+<span class="token attr-name">server.ssl.ciphers</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 客户端认证是否需要（“want”）或需要（“need”）。 需要信任存储。</span>
+<span class="token attr-name">server.ssl.client-auth</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># ssl配置</span>
+<span class="token attr-name">server.ssl.enabled</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-alias</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-password</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-store</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-store-password</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-store-provider</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.key-store-type</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.protocol</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.trust-store</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.trust-store-password</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.trust-store-provider</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token attr-name">server.ssl.trust-store-type</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 创建日志文件的目录。 可以相对于tomcat base dir或absolute。</span>
+<span class="token attr-name">server.tomcat.accesslog.directory</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 启用访问日志。</span>
+<span class="token attr-name">server.tomcat.accesslog.enabled</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+<span class="token comment" spellcheck="true"># 访问日志的格式化模式。</span>
+<span class="token attr-name">server.tomcat.accesslog.pattern</span><span class="token punctuation">=</span> <span class="token attr-value">common</span>
+<span class="token comment" spellcheck="true"># 日志文件名前缀。</span>
+<span class="token attr-name">server.tomcat.accesslog.prefix</span><span class="token punctuation">=</span> <span class="token attr-value">access_log</span>
+<span class="token comment" spellcheck="true"># 日志文件名后缀。</span>
+<span class="token attr-name">server.tomcat.accesslog.suffix</span><span class="token punctuation">=</span> <span class="token attr-value">.log</span>
+<span class="token comment" spellcheck="true"># 在调用backgroundProcess方法之间延迟秒。</span>
+<span class="token attr-name">server.tomcat.background-processor-delay</span><span class="token punctuation">=</span> <span class="token attr-value">30</span>
+<span class="token comment" spellcheck="true"># Tomcat基本目录。 如果未指定，将使用临时目录。</span>
+<span class="token attr-name">server.tomcat.basedir</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 正则表达式匹配可信IP地址。</span>
+<span class="token attr-name">server.tomcat.internal-proxies</span><span class="token punctuation">=</span> <span class="token attr-value">10\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|\\192\\.168\\.\\d{1,3}\\.\\d{1,3}|\\169\\.254\\.\\d{1,3}\\.\\d{1,3}|\\127\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}|\\172\\.1[6-9]{1}\\.\\d{1,3}\\.\\d{1,3}|\\172\\.2[0-9]{1}\\.\\d{1,3}\\.\\d{1,3}|\\172\\.3[0-1]{1}\\.\\d{1,3}\\.\\d{1,3}</span>
+<span class="token comment" spellcheck="true"># HTTP消息头的最大大小（以字节为单位）。</span>
+<span class="token attr-name">server.tomcat.max-http-header-size</span><span class="token punctuation">=</span> <span class="token attr-value">0</span>
+<span class="token comment" spellcheck="true"># 最大工作线程数。</span>
+<span class="token attr-name">server.tomcat.max-threads</span><span class="token punctuation">=</span> <span class="token attr-value">0</span>
+<span class="token comment" spellcheck="true"># 用于覆盖原始端口值的HTTP头的名称。</span>
+<span class="token attr-name">server.tomcat.port-header</span><span class="token punctuation">=</span> <span class="token attr-value">X-Forwarded-Port</span>
+<span class="token comment" spellcheck="true"># 头文件，保存传入协议，通常命名为“X-Forwarded-Proto”。</span>
+<span class="token attr-name">server.tomcat.protocol-header</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 表示传入请求使用SSL的协议头的值。</span>
+<span class="token attr-name">server.tomcat.protocol-header-https-value</span><span class="token punctuation">=</span> <span class="token attr-value">https</span>
+<span class="token comment" spellcheck="true"># 提取远程ip的HTTP头的名称。 例如`X-FORWARDED-FOR`</span>
+<span class="token attr-name">server.tomcat.remote-ip-header</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 用于解码URI的字符编码。</span>
+<span class="token attr-name">server.tomcat.uri-encoding</span><span class="token punctuation">=</span> <span class="token attr-value">UTF-8</span>
+<span class="token comment" spellcheck="true"># 访问日志目录。</span>
+<span class="token attr-name">server.undertow.accesslog.dir</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 启用访问日志。</span>
+<span class="token attr-name">server.undertow.accesslog.enabled</span><span class="token punctuation">=</span> <span class="token attr-value">false</span>
+<span class="token comment" spellcheck="true"># 访问日志的格式化模式。</span>
+<span class="token attr-name">server.undertow.accesslog.pattern</span><span class="token punctuation">=</span> <span class="token attr-value">common</span>
+<span class="token comment" spellcheck="true"># 每个缓冲区的大小字节数。</span>
+<span class="token attr-name">server.undertow.buffer-size</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 每个区域的缓冲区数。</span>
+<span class="token attr-name">server.undertow.buffers-per-region</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 在Java堆之外分配缓冲区。</span>
+<span class="token attr-name">server.undertow.direct-buffers</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 为工作者创建的I / O线程数。</span>
+<span class="token attr-name">server.undertow.io-threads</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 工作线程数。</span>
+<span class="token attr-name">server.undertow.worker-threads</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+<span class="token comment" spellcheck="true"># 如果X-Forwarded- *头应该应用于HttpRequest。</span>
+<span class="token attr-name">server.use-forward-headers</span><span class="token punctuation">=</span><span class="token attr-value"> </span>
+</code></pre>
+<h3 id="3-自定义属性与加载"><a href="#3-自定义属性与加载" class="headerlink" title="3 自定义属性与加载"></a>3 自定义属性与加载</h3><h4 id="3-1-自定义属性"><a href="#3-1-自定义属性" class="headerlink" title="3.1 自定义属性"></a>3.1 自定义属性</h4><p>我们在使用Spring Boot的时候，通常也需要定义一些自己使用的属性，我们可以如下方式直接定义：</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true">#自定义配置属性</span>
+<span class="token attr-name">com.example.demo.property1</span><span class="token punctuation">=</span><span class="token attr-value">text</span>
+<span class="token attr-name">com.example.demo.property2</span><span class="token punctuation">=</span><span class="token attr-value">1</span>
+<span class="token attr-name">com.example.demo.property3</span><span class="token punctuation">=</span><span class="token attr-value">true</span>
+</code></pre>
+<p>然后通过<code>@Value(&quot;${属性名}&quot;)</code>注解来加载对应的配置属性，具体如下：</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@Data</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestProperties</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${com.example.demo.property1}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String property1<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${com.example.demo.property2}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> property2<span class="token punctuation">;</span>
+
+    <span class="token annotation punctuation">@Value</span><span class="token punctuation">(</span><span class="token string">"${com.example.demo.property3}"</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> property3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>然后我们来测试一下。</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RunWith</span><span class="token punctuation">(</span>SpringJUnit4ClassRunner<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@SpringBootTest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ApplicationTests</span> <span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Autowired</span>
+    <span class="token keyword">private</span> TestProperties testProperties<span class="token punctuation">;</span>
+
+
+    <span class="token annotation punctuation">@Test</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span>testProperties<span class="token punctuation">.</span><span class="token function">getProperty1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"text"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span>testProperties<span class="token punctuation">.</span><span class="token function">getProperty2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        Assert<span class="token punctuation">.</span><span class="token function">assertEquals</span><span class="token punctuation">(</span>testProperties<span class="token punctuation">.</span><span class="token function">isProperty3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="3-2-参数间的引用"><a href="#3-2-参数间的引用" class="headerlink" title="3.2 参数间的引用"></a>3.2 参数间的引用</h4><p>在<code>application.properties</code>中的各个参数之间也可以直接引用来使用，就像下面的设置：</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token attr-name">com.example.demo.property4</span><span class="token punctuation">=</span><span class="token attr-value">${com.example.demo.property1}+${com.example.demo.property2}</span>
+</code></pre>
+<h4 id="3-3-使用随机数"><a href="#3-3-使用随机数" class="headerlink" title="3.3 使用随机数"></a>3.3 使用随机数</h4><p>有时候对于一些特殊的属性的时候，我们并不希望它的参数值是一个固定的值。这样的话我们就需要使用到随机数的概念。</p>
+<pre class=" language-properties"><code class="language-properties"><span class="token comment" spellcheck="true"># 随机字符串</span>
+<span class="token attr-name">com.example.demo.random.value</span><span class="token punctuation">=</span><span class="token attr-value">${random.value}</span>
+<span class="token comment" spellcheck="true"># 随机int</span>
+<span class="token attr-name">com.example.demo.random.number</span><span class="token punctuation">=</span><span class="token attr-value">${random.int}</span>
+<span class="token comment" spellcheck="true"># 随机long</span>
+<span class="token attr-name">com.example.demo.random.bignumber</span><span class="token punctuation">=</span><span class="token attr-value">${random.long}</span>
+<span class="token comment" spellcheck="true"># 10以内的随机数</span>
+<span class="token attr-name">com.example.demo.random.test1</span><span class="token punctuation">=</span><span class="token attr-value">${random.int(10)}</span>
+<span class="token comment" spellcheck="true"># 10-20的随机数</span>
+<span class="token attr-name">com.example.demo.random.test2</span><span class="token punctuation">=</span><span class="token attr-value">${random.int[10,20]}</span>
+</code></pre>
+<h4 id="3-4-通过命令行设置属性值"><a href="#3-4-通过命令行设置属性值" class="headerlink" title="3.4 通过命令行设置属性值"></a>3.4 通过命令行设置属性值</h4><p>在命令行运行时，连续的两个减号<code>--</code>就是对<code>application.properties</code>中的属性值进行赋值的标识。所以，<code>java -jar xxx.jar --server.port=8888</code>命令，等价于我们在<code>application.properties</code>中添加属性<code>server.port=8888</code>，该设置在样例工程中可见，读者可通过删除该值或使用命令行来设置该值来验证。</p>
+<p>通过命令行来修改属性值固然提供了不错的便利性，但是通过命令行就能更改应用运行的参数，那岂不是很不安全？是的，所以Spring Boot也贴心的提供了屏蔽命令行访问属性的设置，只需要这句设置就能屏蔽：<code>SpringApplication.setAddCommandLineProperties(false)</code>。</p>
+<h4 id="3-5-多环境配置"><a href="#3-5-多环境配置" class="headerlink" title="3.5 多环境配置"></a>3.5 多环境配置</h4><p>我们在开发Spring Boot的时候会发现，我们针对多个环境需要配置多种配置文件。比如：开发、测试、生产等。</p>
+<p>在Spring Boot中多环境配置文件名需要满足<code>application-{profile}.properties</code>的格式，其中<code>{profile}</code>对应你的环境标识，比如：</p>
+<ul>
+<li><code>application-dev.properties</code>：开发环境</li>
+<li><code>application-test.properties</code>：测试环境</li>
+<li><code>application-prod.properties</code>：生产环境</li>
+</ul>
+<p>至于哪个具体的配置文件会被加载，需要在<code>application.properties</code>文件中通过<code>spring.profiles.active</code>属性来设置，其值对应<code>{profile}</code>值。</p>
+<p>如：<code>spring.profiles.active=test</code>就会加载<code>application-test.properties</code>配置文件内容</p>
+<h4 id="3-6-ConfigurationProperties"><a href="#3-6-ConfigurationProperties" class="headerlink" title="3.6 @ConfigurationProperties"></a>3.6 @ConfigurationProperties</h4><p>手动书写@Value还是比较繁重的工作，好在Spring Boot提供了更简洁的方式。@ConfigurationProperties(prefix = “test”)。prefix指定了配置文件的前缀为test，并且按照属性名进行自动匹配，例如：test.name属性值会自动加载到private String name域中。</p>
+<p>Spring Boot1.5之前的写法:</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Component</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span>prefix <span class="token operator">=</span> <span class="token string">"test"</span><span class="token punctuation">,</span> locations <span class="token operator">=</span> <span class="token string">"classpath:xxxx.properties"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Configuration</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> String name<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> String age<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> Long tel<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// setter getter</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+            </div>
+            <hr>
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/zhifubao-fukuanma.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="http://kyshblogs.oss-cn-beijing.aliyuncs.com/blogs/WeChatExceptional.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            <div class="reprint">
+                <p>
+                    <span class="reprint-tip">
+                        <i class="fa fa-exclamation-circle"></i>&nbsp;&nbsp;转载请注明:
+                    </span>
+                    <a href="http://www.kangyuannsheng.top" class="b-link-green">康源晟的技术小站</a>
+                    <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
+                    <a href="/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-7.pei-zhi-wen-jian/" class="b-link-green">Spring Boot系列之使用篇:7.配置文件</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-8.spring-aop-qie-mian-tong-yi-da-yin-qing-qiu-ri-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Spring Boot系列之使用篇:8.Spring AOP切面统一打印请求日志">
+                        
+                        <span class="card-title">Spring Boot系列之使用篇:8.Spring AOP切面统一打印请求日志</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1.Log4j2 介绍Spring Boot 中默认使用 Logback 作为日志框架，接下来我们将学习如何在 Spring Boot 中集成与配置 Log4j2。在配置之前，我们需要知道的是 Log4j2 是 Log4j 的升级版，它在 </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-24
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring-Boot/" class="post-category" target="_blank">
+                                    Spring Boot
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                    <a href="/tags/log4j2/" target="_blank">
+                        <span class="chip bg-color">log4j2</span>
+                    </a>
+                    
+                    <a href="/tags/AOP/" target="_blank">
+                        <span class="chip bg-color">AOP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-5.fu-wu-qi-duan-can-shu-xiao-yan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Spring Boot系列之使用篇:5.服务器端参数校验">
+                        
+                        <span class="card-title">Spring Boot系列之使用篇:5.服务器端参数校验</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary">1.之前的服务端校验：/**
+ * @param menuUpdateBo 菜单修改数据Bo
+ * @return
+ * @Description:校验修改数据是否正确
+ * @author kangyuansheng
+ * @date 2</div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring-Boot/" class="post-category" target="_blank">
+                                    Spring Boot
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring-Boot/" target="_blank">
+                        <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="http://kangyuansheng.top/" target="_blank">kangyuansheng</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a> 的
+            <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>主题搭建.
+
+            
+                &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+                <span class="white-color">14.1k</span>
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/kangyuansheng" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:kangyuansheng@aliyun.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1219764457" class="tooltipped" data-tooltip="QQ联系我: 1219764457" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>

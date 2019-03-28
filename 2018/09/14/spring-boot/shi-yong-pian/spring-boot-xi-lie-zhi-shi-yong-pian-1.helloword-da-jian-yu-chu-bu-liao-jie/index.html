@@ -319,14 +319,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        771
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        4 分
                     </div>
                     
                 
@@ -386,18 +386,38 @@ public class SpringbootCodeBaseApplication {
     }
 }
 </code></pre>
+<p>首先我们看一下启动注解@SpringBootApplication的源码：</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Target</span><span class="token punctuation">(</span>ElementType<span class="token punctuation">.</span>TYPE<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Retention</span><span class="token punctuation">(</span>RetentionPolicy<span class="token punctuation">.</span>RUNTIME<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@Documented</span>
+<span class="token annotation punctuation">@Inherited</span>
+<span class="token annotation punctuation">@SpringBootConfiguration</span>
+<span class="token annotation punctuation">@EnableAutoConfiguration</span>
+<span class="token annotation punctuation">@ComponentScan</span><span class="token punctuation">(</span>excludeFilters <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token annotation punctuation">@Filter</span><span class="token punctuation">(</span>type <span class="token operator">=</span> FilterType<span class="token punctuation">.</span>CUSTOM<span class="token punctuation">,</span> classes <span class="token operator">=</span> TypeExcludeFilter<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token annotation punctuation">@Filter</span><span class="token punctuation">(</span>type <span class="token operator">=</span> FilterType<span class="token punctuation">.</span>CUSTOM<span class="token punctuation">,</span> classes <span class="token operator">=</span> AutoConfigurationExcludeFilter<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> @<span class="token keyword">interface</span> <span class="token class-name">SpringBootApplication</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>这个时候我们就发现<code>@SpringBootApplication</code>是一个复合注解，主要包括了<code>@ComponentScan</code>，和<code>@SpringBootConfiguration</code>，<code>@EnableAutoConfiguration</code>。</p>
+<ul>
+<li><code>@SpringBootConfiguration</code>继承自<code>@Configuration</code>，二者功能也一致，标注当前类是配置类，并会将当前类内声明的一个或多个以<code>@Bean</code>注解标记的方法的实例纳入到<code>srping</code>容器中，并且实例名就是方法名。</li>
+<li><code>@EnableAutoConfiguration</code>是springboot实现自动化配置的核心注解，通过这个注解把spring应用所需的bean注入容器中．<code>@EnableAutoConfiguration</code>源码通过<code>@Import</code>注入了一个<code>ImportSelector</code>的实现类<br> <code>AutoConfigurationImportSelector</code>,这个<code>ImportSelector</code>最终实现根据我们的配置，动态加载所需的bean。</li>
+<li><code>@ComponentScan</code>，扫描当前包及其子包下被<code>@Component</code>，<code>@Controller</code>，<code>@Service</code>，<code>@Repository</code>注解标记的类并纳入到spring容器中进行管理。是以前的<code>&lt;context:component-scan&gt;</code>（以前使用在xml中使用的标签，用来扫描包配置的平行支持）。所以本demo中的User为何会被<code>spring</code>容器管理。</li>
+</ul>
+<p><code>@SpringBootApplication</code>只会扫描<code>@SpringBootApplication</code>注解标记类包下及其子包的类（特定注解标记，比如说<code>@Controller</code>，<code>@Service</code>，<code>@Component</code>,<code>@Configuration</code>和<code>@Bean</code>注解等等）纳入到spring容器。</p>
+<p>假如出现与之不在同一个包下的类，则需要指定扫描路径：<code>@SpringBootApplication(scanBasePackages = &quot;xxx.xxx.xxx&quot;)</code></p>
+<p>不让某个类扫描到则需要添加<code>exclude或excludeName</code></p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>exclude <span class="token operator">=</span> xxx<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@SpringBootApplication</span><span class="token punctuation">(</span>excludeName <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"xxx.xx.xxx"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
 <h4 id="3-2-application-properties"><a href="#3-2-application-properties" class="headerlink" title="3.2 application.properties"></a>3.2 application.properties</h4><p>该配置文件是项目的核心配置文件</p>
-<h4 id="3-3-pom-xml-maven配置文件"><a href="#3-3-pom-xml-maven配置文件" class="headerlink" title="3.3 pom.xml  maven配置文件"></a>3.3 pom.xml  maven配置文件</h4><pre class=" language-properties"><code class="language-properties"><span class="token attr-name">&lt;!--</span> <span class="token attr-value">引入Web模块  --></span>
-&lt;dependency>
-    &lt;groupId>org.springframework.boot&lt;/groupId>
-    &lt;artifactId>spring-boot-starter-web&lt;/artifactId>
-&lt;/dependency>
-<span class="token attr-name">&lt;!--</span> <span class="token attr-value">测试模块  --></span>
-&lt;dependency>
-    &lt;groupId>org.springframework.boot&lt;/groupId>
-    &lt;artifactId>spring-boot-starter-test&lt;/artifactId>
-    &lt;scope>test&lt;/scope>
-&lt;/dependency>
+<h4 id="3-3-pom-xml-maven配置文件"><a href="#3-3-pom-xml-maven配置文件" class="headerlink" title="3.3 pom.xml  maven配置文件"></a>3.3 pom.xml  maven配置文件</h4><pre class=" language-xml"><code class="language-xml"><span class="token comment" spellcheck="true">&lt;!-- 引入Web模块  --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="编写HelloWorld"><a href="#编写HelloWorld" class="headerlink" title="编写HelloWorld:"></a>编写HelloWorld:</h3><p>创建HelloController类</p>
 <pre class=" language-Java"><code class="language-Java">/**
@@ -592,27 +612,24 @@ public class HelloController {
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/">
+                <a href="/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-2.ji-cheng-jooq/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Spring Boot系列之使用篇:1.HelloWord搭建与初步了解">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Spring Boot系列之使用篇:2.集成Jooq">
                         
-                        <span class="card-title">Spring Boot系列之使用篇:1.HelloWord搭建与初步了解</span>
+                        <span class="card-title">Spring Boot系列之使用篇:2.集成Jooq</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">1.Spring Boot的介绍：Spring最重要的是以下四个核心。
-
-自动配置：针对很多Spring应用程序常见的应用功能，Spring Boot能自动提供相关配置
-起步依赖：告诉Spring Boot需要什么功能，它就能引入需要的库。</div>
+                    <div class="summary">1.Jooq介绍：jOOQ是一个基于Java编写SQL的工具包，具有：简单、轻量、函数式编程写SQL等独特优势，非常适合敏捷快速迭代开发。
+2.集成Jooq2.1 修改pom.xml&lt;?xml version="1.0" encodi</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-09-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -625,12 +642,15 @@ public class HelloController {
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/Spring-Boot/" target="_blank">
                         <span class="chip bg-color">Spring Boot</span>
+                    </a>
+                    
+                    <a href="/tags/Jooq/" target="_blank">
+                        <span class="chip bg-color">Jooq</span>
                     </a>
                     
                 </div>
@@ -706,7 +726,7 @@ public class HelloController {
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">5.5k</span>
+                <span class="white-color">14.1k</span>
             
 
             

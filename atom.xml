@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.kangyuannsheng.top/"/>
-  <updated>2019-03-20T08:57:31.048Z</updated>
+  <updated>2019-03-28T01:11:54.114Z</updated>
   <id>http://www.kangyuannsheng.top/</id>
   
   <author>
@@ -17,11 +17,257 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Spring Cloud系列:1.微服务介绍</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/28/spring-cloud/spring-cloud-xi-lie-1.wei-fu-wu-jie-shao/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/28/spring-cloud/spring-cloud-xi-lie-1.wei-fu-wu-jie-shao/</id>
+    <published>2019-03-27T16:15:00.000Z</published>
+    <updated>2019-03-28T01:11:54.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-什么是微服务：&quot;&gt;&lt;a href=&quot;#1-什么是微服务：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Cloud" scheme="http://www.kangyuannsheng.top/categories/Spring-Cloud/"/>
+    
+    
+      <category term="Spring Cloud" scheme="http://www.kangyuannsheng.top/tags/Spring-Cloud/"/>
+    
+      <category term="微服务" scheme="http://www.kangyuannsheng.top/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:6.使用 Spring Boot上传文件</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/25/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-6.shi-yong-spring-boot-shang-chuan-wen-jian/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/25/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-6.shi-yong-spring-boot-shang-chuan-wen-jian/</id>
+    <published>2019-03-25T14:25:00.000Z</published>
+    <updated>2019-03-27T02:31:07.209Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;文件上传示例&quot;&gt;&lt;a href=&quot;#文件上传示例&quot; class=&quot;headerlink&quot; title=&quot;文件上传示例&quot;&gt;&lt;/a&gt;文件上传示例&lt;/h3&gt;&lt;p&gt;Spring
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:9.WebMvcConfigurer详解</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-9.webmvcconfigurer-xiang-jie/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-9.webmvcconfigurer-xiang-jie/</id>
+    <published>2019-03-24T15:44:00.000Z</published>
+    <updated>2019-03-27T05:57:37.519Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-WebMvcConfigurer-介绍&quot;&gt;&lt;a href=&quot;#1-WebMvcConfigurer-介绍&quot; class=&quot;headerlink&quot; title=&quot;1.WebMvcConfigurer 介绍&quot;&gt;&lt;/a&gt;1.WebMvcConfigurer
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:8.Spring AOP切面统一打印请求日志</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-8.spring-aop-qie-mian-tong-yi-da-yin-qing-qiu-ri-zhi/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-8.spring-aop-qie-mian-tong-yi-da-yin-qing-qiu-ri-zhi/</id>
+    <published>2019-03-24T01:55:00.000Z</published>
+    <updated>2019-03-27T05:28:16.689Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Log4j2-介绍&quot;&gt;&lt;a href=&quot;#1-Log4j2-介绍&quot; class=&quot;headerlink&quot; title=&quot;1.Log4j2 介绍&quot;&gt;&lt;/a&gt;1.Log4j2 介绍&lt;/h3&gt;&lt;p&gt;Spring Boot 中默认使用 Logback
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+      <category term="log4j2" scheme="http://www.kangyuannsheng.top/tags/log4j2/"/>
+    
+      <category term="AOP" scheme="http://www.kangyuannsheng.top/tags/AOP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:7.配置文件</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-7.pei-zhi-wen-jian/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/24/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-7.pei-zhi-wen-jian/</id>
+    <published>2019-03-23T17:39:00.000Z</published>
+    <updated>2019-03-27T06:37:51.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-application-properties介绍：&quot;&gt;&lt;a href=&quot;#1-application-properties介绍：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:5.服务器端参数校验</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-5.fu-wu-qi-duan-can-shu-xiao-yan/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-5.fu-wu-qi-duan-can-shu-xiao-yan/</id>
+    <published>2019-03-23T15:28:00.000Z</published>
+    <updated>2019-03-27T02:29:31.106Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-之前的服务端校验：&quot;&gt;&lt;a href=&quot;#1-之前的服务端校验：&quot; class=&quot;headerlink&quot; title=&quot;1.之前的服务端校验：&quot;&gt;&lt;/a&gt;1.之前的服务端校验：&lt;/h3&gt;&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:4.集成Swagger2</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-4.ji-cheng-swagger2/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-4.ji-cheng-swagger2/</id>
+    <published>2019-03-23T15:27:00.000Z</published>
+    <updated>2019-03-27T01:49:09.421Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Swagger2介绍：&quot;&gt;&lt;a href=&quot;#1-Swagger2介绍：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+      <category term="Swagger2" scheme="http://www.kangyuannsheng.top/tags/Swagger2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:3.集成Lombok</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-3.ji-cheng-lombok/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-3.ji-cheng-lombok/</id>
+    <published>2019-03-23T15:26:00.000Z</published>
+    <updated>2019-03-27T01:14:36.202Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Lombok介绍：&quot;&gt;&lt;a href=&quot;#1-Lombok介绍：&quot; class=&quot;headerlink&quot; title=&quot;1.Lombok介绍：&quot;&gt;&lt;/a&gt;1.Lombok介绍：&lt;/h3&gt;&lt;p&gt;Lombok 是一种 Java™ 实用工具，可用来帮助开发人员消除
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+      <category term="Lombok" scheme="http://www.kangyuannsheng.top/tags/Lombok/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot系列之使用篇:2.集成Jooq</title>
+    <link href="http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-2.ji-cheng-jooq/"/>
+    <id>http://www.kangyuannsheng.top/2019/03/23/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-2.ji-cheng-jooq/</id>
+    <published>2019-03-23T15:25:00.000Z</published>
+    <updated>2019-03-27T01:14:36.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-Jooq介绍：&quot;&gt;&lt;a href=&quot;#1-Jooq介绍：&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/categories/Spring-Boot/"/>
+    
+    
+      <category term="Spring Boot" scheme="http://www.kangyuannsheng.top/tags/Spring-Boot/"/>
+    
+      <category term="Jooq" scheme="http://www.kangyuannsheng.top/tags/Jooq/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spring Boot系列之使用篇:1.HelloWord搭建与初步了解</title>
     <link href="http://www.kangyuannsheng.top/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/"/>
     <id>http://www.kangyuannsheng.top/2018/09/14/spring-boot/shi-yong-pian/spring-boot-xi-lie-zhi-shi-yong-pian-1.helloword-da-jian-yu-chu-bu-liao-jie/</id>
     <published>2018-09-14T01:25:00.000Z</published>
-    <updated>2019-03-20T08:57:31.048Z</updated>
+    <updated>2019-03-26T07:39:36.121Z</updated>
     
     <summary type="html">
     
