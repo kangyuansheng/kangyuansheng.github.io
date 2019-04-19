@@ -85,23 +85,54 @@ public class SpringbootCodeBaseApplication {
     }
 }
 ```
+首先我们看一下启动注解@SpringBootApplication的源码：
+
+```java
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan(excludeFilters = {
+		@Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),
+		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
+public @interface SpringBootApplication {
+	......
+}
+```
+
+这个时候我们就发现`@SpringBootApplication`是一个复合注解，主要包括了`@ComponentScan`，和`@SpringBootConfiguration`，`@EnableAutoConfiguration`。
+
+- `@SpringBootConfiguration`继承自`@Configuration`，二者功能也一致，标注当前类是配置类，并会将当前类内声明的一个或多个以`@Bean`注解标记的方法的实例纳入到`srping`容器中，并且实例名就是方法名。
+- `@EnableAutoConfiguration`是springboot实现自动化配置的核心注解，通过这个注解把spring应用所需的bean注入容器中．`@EnableAutoConfiguration`源码通过`@Import`注入了一个`ImportSelector`的实现类
+   `AutoConfigurationImportSelector`,这个`ImportSelector`最终实现根据我们的配置，动态加载所需的bean。
+- `@ComponentScan`，扫描当前包及其子包下被`@Component`，`@Controller`，`@Service`，`@Repository`注解标记的类并纳入到spring容器中进行管理。是以前的`<context:component-scan>`（以前使用在xml中使用的标签，用来扫描包配置的平行支持）。所以本demo中的User为何会被`spring`容器管理。
+
+`@SpringBootApplication`只会扫描`@SpringBootApplication`注解标记类包下及其子包的类（特定注解标记，比如说`@Controller`，`@Service`，`@Component`,`@Configuration`和`@Bean`注解等等）纳入到spring容器。
+
+假如出现与之不在同一个包下的类，则需要指定扫描路径：`@SpringBootApplication(scanBasePackages = "xxx.xxx.xxx")`
+
+不让某个类扫描到则需要添加`exclude或excludeName`
+
+```java
+@SpringBootApplication(exclude = xxx.class)
+@SpringBootApplication(excludeName = {"xxx.xx.xxx"})
+```
+
+
+
 #### 3.2 application.properties
 
 该配置文件是项目的核心配置文件
 
 #### 3.3 pom.xml  maven配置文件
 
-```properties
+```xml
 <!-- 引入Web模块  -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-<!-- 测试模块  -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-test</artifactId>
-    <scope>test</scope>
 </dependency>
 ```
 
